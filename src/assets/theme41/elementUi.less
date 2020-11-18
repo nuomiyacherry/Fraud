@@ -1,0 +1,242 @@
+.elementUi() {
+  #app {
+    .el-table th {
+      // background-color: @tableThBg;
+      background-color: transparent;
+      >.cell {
+        color: @tableThColor;
+        vertical-align: initial;
+      }
+    }
+    .el-table__body {
+      border-collapse: separate;
+      border-spacing: 0 0.05rem; //5px;
+    }
+    .el-table tbody tr{
+      background-color: @tableTdBg;
+      // background-color: transparent;
+      .cell {
+        color: @tableTdColor;
+      }
+    }
+    .el-table .cell {
+      line-height: 0.18rem;
+    }
+    // .el-table tr.el-table__row.el-table__row--striped {
+    //   background: linear-gradient(to right, rgba(15,24,54,0.4),rgba(60,179,255,0.4), rgba(15,24,54,0.4));
+    //   box-shadow: inset 0px 0px 20px rgba(47,108,183,0.3);
+    // }
+    .el-table {
+      thead tr {
+        // background: linear-gradient(to right, rgba(15,24,54,0.4),rgba(60,179,255,0.4), rgba(15,24,54,0.4));
+        // box-shadow: inset 0px 0px 20px rgba(47,108,183,0.3);
+        background: @tableThBg;
+      }
+    }
+    .el-table--striped .el-table__body tr.el-table__row--striped td{
+      // background: @tableStriped;
+      background-color: transparent;
+    }
+    .el-table--enable-row-hover .el-table__body tr:hover>td{
+      //  background-color: @tableStriped;
+      background-color: transparent;
+    }
+    .el-table td,
+    .el-table th.is-leaf{
+      // border-bottom: 1px solid @borderColor;
+      border-bottom: none;
+      font-size:0.1rem;
+      padding: 0.04rem 0;
+    }
+    .el-table--border::after,
+    .el-table--group::after,
+    .el-table::before{
+      // background-color: @borderColor;
+      background-color: transparent;
+    }
+    .el-table--fit {
+      border: none;
+      border-bottom: none;
+    }
+    .el-table,
+    .el-table__expanded-cell{
+      background-color: transparent;
+    }
+    .el-table {
+      &.thead-no-bg {
+        thead tr {
+          background: transparent;
+          box-shadow: none;
+          .cell {
+            color: #01a7fd;
+          }
+        }
+      }
+    }
+    .el-table {
+      a {
+        color: #52bbce;
+        text-decoration: underline;
+      }
+    }
+    .el-button {
+      padding: 5px 8px;
+      background: #182C43;
+      color: #287098;
+      border-color: currentColor;
+    }
+    
+    .el-radio-button {
+      .el-radio-button__inner {
+        font-size:0.1rem;
+        padding: 0.05rem 0.1rem;
+        color: #6AB3CE;
+        background:transparent;// rgba(178,241,255,0.30);
+        border-color:#26DAFF;
+      }
+      
+            
+      &.is-active {
+        .el-radio-button__inner {
+          color: #46C4FF;
+          // border-color: rgba(154,237,255,0.10);
+          background: rgba(143,211,226,0.2);
+        }
+      }
+    }
+    .el-loading-mask {
+      background-color: rgba(24,44,67,.3);
+    }
+    //自定义表格样式
+    .cus-table {
+      &.el-table {        
+        .el-table__header{
+          border-collapse: collapse; 
+          table-layout: auto;
+          background: linear-gradient(to right, rgba(12,47,67,1),rgba(15,65,87,1), rgba(12,47,67,1));
+          thead tr{
+            box-shadow: none;
+            color:rgba(34,146,162,1);
+          }
+        }
+        .el-table__body{
+          border-collapse: separate; 
+          border-spacing:0 0 8px;
+          tbody tr{
+            &.el-table__row.el-table__row--striped {
+              background: linear-gradient(to right, rgba(10,42,63,0.1),rgba(10,42,63,1), rgba(10,42,63,0.1));;
+              box-shadow: none;
+              color:rgba(34,146,162,1);
+            }
+          }
+        }
+      }
+
+      
+    }
+    [class*=" el-icon-"], [class^=el-icon-] {
+      font-size: 16px !important;
+    }
+    //深度分析-涉诈团伙分析表格颜色(五种)
+    .tableStyle(@thBg;@tdBg;@thColor;@tdColor;){
+      &.el-table {
+        thead tr {
+          background: @thBg !important;
+          th{
+            >.cell {
+              color: @thColor !important;
+            }
+          }
+        }
+      }
+      &.el-table tbody tr{
+        background-color: @tdBg !important;
+        .cell {
+          color: @tdColor !important;
+        }
+        a{
+          color: @tdColor !important;
+        }
+      }
+    }
+    .orange{
+      .tableStyle(@orangeTableThBg;@orangeTableTdBg;@orangeTableThColor;@orangeTableTdColor;)
+    }
+    .blue{
+      .tableStyle(@blueTableThBg;@blueTableTdBg;@blueTableThColor;@blueTableTdColor;)
+    }
+    .purple{
+      .tableStyle(@purpleTableThBg;@purpleTableTdBg;@purpleTableThColor;@purpleTableTdColor;)
+    }
+    .green{
+      .tableStyle(@greenTableThBg;@greenTableTdBg;@greenTableThColor;@greenTableTdColor;)
+    }
+    .yellow{
+      .tableStyle(@yellowTableThBg;@yellowTableTdBg;@yellowTableThColor;@yellowTableTdColor;)
+    }
+    .aggregation{
+      .map-detail {
+        [class*=" el-icon-"], [class^=el-icon-]  {
+          font-size: 0.2rem !important;
+        }
+      }
+    }
+  }
+  [class*=" el-icon-"], [class^=el-icon-] {
+    font-size: 16px !important;
+  }
+
+  // 弹出框dialog
+  .el-dialog{
+    background:#244862;//rgba(36,72,98,1);
+    .el-dialog__header{
+      font-size: 0.2rem;
+      padding: 20px 20px 0;
+      .el-dialog__title{
+        color:#60E7EE;//rgba(92,218,220,1);
+        font-weight: 600;
+        font-size:0.12rem;
+        letter-spacing: 1px;
+      }
+      .el-dialog__close{
+        font-size:0.15rem !important;
+      }
+    }
+  }
+  .el-pagination{
+    text-align: right;
+    color:rgba(143,196,212);//@fontColor;
+    .el-pager li{
+      background: transparent;
+      &.active{
+        color:rgba(92,218,220,1);//@fontColor;
+      }
+      &.btn-quicknext,&.btn-quickprev{
+        color:rgba(143,196,212);
+      }
+    }
+    .btn-next,.btn-prev{
+      background: linear-gradient(to bottom, rgba(77,168,189,1), rgba(45,119,178,1));//transparent;
+      border:1px solid rgba(81,193,202,1);
+      border-radius: 12px;
+      color:rgba(140,212,233,1);
+      padding: 0 15px;
+      &:disabled{
+        opacity: 0.5;
+      }
+    }
+  }
+  .el-progress{
+    // margin-left:0.1rem;
+    display: inline-block !important;
+    vertical-align: middle;
+  }
+  .el-progress-bar__inner{
+    background-image: linear-gradient(to right,#6894ff,#09ffea,#04e1ac)
+  }
+  .el-progress-bar__outer {
+    background: #3176AA;
+    width:1rem;
+  }
+    
+}

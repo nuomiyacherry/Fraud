@@ -1,0 +1,110 @@
+.slider-pro {
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  font-family: 'Open Sans', Arial;
+}
+
+/* Example 1 */
+.banner {
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to bottom, #167ebf, #000a2f)
+}
+
+.sp-bottom-thumbnails.sp-has-pointer {
+  margin-top: -4vh !important;
+  width: 160px !important;
+}
+
+.sp-bottom-thumbnails .sp-thumbnail-container,
+.sp-top-thumbnails .sp-thumbnail-container {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.sp-thumbnails{
+  height: 4vh;
+  width: 160px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+}
+.sp-thumbnails.sp-grab {
+  width: 100% !important;
+  height: 4vh !important;
+}
+
+.sp-thumbnail-container {
+  width: 20px !important;
+  height: 4vh !important;
+}
+
+.sp-thumbnail-container.sp-selected-thumbnail .sp-thumbnail {
+  background-color: #ffcb49 !important;
+}
+
+.sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
+  display: none !important;
+}
+
+.sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
+  display: none !important;
+}
+
+.sp-bottom-thumbnails.sp-has-pointer .sp-thumbnail {
+  top: 1vh !important;
+}
+
+#slider-banner .sp-thumbnail {
+  width: 1.2vh;
+  height: 1.2vh;
+  border-radius: 50%;
+  border: 2px solid #ffcb49;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+
+#slider-banner .sp-thumbnail-title {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+#slider-banner .sp-thumbnail-description {
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 860px) {
+  #slider-banner .hide-medium-screen {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  #slider-banner .sp-layer {
+    font-size: 12px;
+  }
+
+  #slider-banner .hide-small-screen {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #slider-banner .sp-thumbnail {
+    text-align: center;
+  }
+
+  #slider-banner .sp-thumbnail-title {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  #slider-banner .sp-thumbnail-description {
+    display: none;
+  }
+}

@@ -1,0 +1,495 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: #39bae2;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url('../font/titleFont.ttf');
+}
+
+.loginBox {
+  height: 480px;
+  width: 540px;
+  /* background: url(../img/loginBox1.png) no-repeat; */
+}
+
+.title {
+  font-family: myFirstFont;
+  text-align: center;
+  font-size: 36px;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: normal;
+}
+
+.inputBox>div {
+  margin-top: 20px;
+}
+
+.yzm {
+  display: none;
+}
+
+.regist{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.regist a {
+  position: relative;
+  line-height: 30px;
+}
+.regist a::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -30px;
+  width: 20px;
+  height: 1px;
+  background: #39bae2;
+}
+
+.regist a::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  width: 20px;
+  height: 1px;
+  background: #39bae2;
+}
+
+input {
+  text-indent: 44px;
+  outline: none;
+  height: 45px;
+  width: 400px;
+  border-radius: 50px;
+  margin: auto;
+  border: solid 1px #687BEF;
+  background: #333E82;
+  font-size: 16px;
+  color: #fff;
+}
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ababab;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ababab;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #ababab;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ababab;
+}
+
+input.input_yz {
+  text-indent: 10px;
+}
+
+.img_yz {
+  position: absolute;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 45px;
+  padding-left: 10px;
+  width: 120px;
+  height: 47px;
+  right: 85px;
+  border-radius: 0 5px 5px 0;
+}
+
+.img_yz img {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border-radius: 0 5px 5px 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer
+}
+
+.inputBox>div i {
+  color: #fff;
+  position: absolute;
+  display: inline-block;
+  font-size: 26px;
+  line-height: 45px;
+  padding-left: 10px;
+}
+
+.inputBox>div i.icon-mima {
+  font-size: 32px;
+  padding-left: 8px;
+}
+
+.inputBox {
+  padding: 20px 0 0 70px;
+}
+
+.loginBtnBox {
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.loginBtn {
+  cursor: pointer;
+  height: 45px;
+  width: 400px;
+  /* background: #468cff; */
+  background: linear-gradient(to bottom, #5fdaec, #2bc6f2);
+  font-size: 16px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+}
+
+.loginBtn:hover {
+  opacity: 0.8;
+}
+.wrapper {
+  margin-left: 100px;
+  margin-top: 15px;
+  color:#bcc4db;
+}
+.wrapper label {
+   font-size: 16px;
+   cursor: pointer;
+ }
+
+.wrapper label i {
+   font-size: 14px;
+   font-style: normal;
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   text-align: center;
+   line-height: 20px;
+   color: #fff;
+   vertical-align: middle;
+   margin: -2px 10px 1px 0px;
+   border: #687BEF 1px solid;
+   position: relative;
+ }
+.wrapper label i::before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0px;
+  left:0px;
+}
+.wrapper input[type="checkbox"] {
+   display: none;
+ }
+.wrapper input[type="checkbox"]:checked+i {
+   background: #333E82;
+ }
+.wrapper input[type="checkbox"]:checked+i::before {
+  content: '√';
+}
+.wrapper .right{
+  margin-right: 90px;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+@media screen and (max-height: 768px) {
+  .login {
+    top: 50%;
+  }
+}
+
+
+/* 注册页面 */
+.inputBox>div.regist-input.first {
+  margin-top: 10px;
+}
+.regist-input input {
+  border-radius: 5px;
+  height: 35px;
+  margin-left: 90px;
+  width: 350px;
+  text-indent: 10px;
+  color:#fff;
+}
+.regist-input #company_credit_code{
+    margin-left: 150px;
+    width: 290px;
+}
+.logo-box {
+  padding: 30px 0px 0px 50px;
+  height: 50px;
+  position: relative;
+}
+
+.logo-box .logo {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.logo-box span {
+  font-family: myFirstFont;
+  font-size: 36px;
+  line-height: 50px;
+  vertical-align: middle;
+  margin: 10px 0;
+  color: #6afeff;
+  font-weight: normal;
+}
+
+.btn-login {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  color: #758ba6;
+  background-color: #1d2f59;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.subTitle {
+  color: #bdcfdf;
+  font-size: 20px;
+  text-align: center;
+}
+
+.regist-wrapper {
+  top: 50%;
+  left: 58%;
+}
+.regist-wrapper .title {
+  color: #6afeff;
+  margin-top: 20px;
+}
+.regist-wrapper #formId {
+  margin-top: 20px;
+}
+.forget-wrapper .inputBox>div label,
+.regist-wrapper .inputBox>div label {
+  color: #baccd8;
+  position: absolute;
+  display: inline-block;
+  line-height: 35px;
+  /* padding-left: 10px; */
+  /* text-align: right; */
+  /* width: 150px; */
+}
+.regist-wrapper .loginBox {
+  height: auto;
+  padding: 10px 0px 20px;
+  background: #2b3570;
+  border: 1px solid #687BEF;
+}
+
+.regist-wrapper .inputBox {
+  padding: 0px 0px 0px 30px;
+}
+.forget-wrapper .loginBtn,
+.regist-wrapper .loginBtn {
+  border-radius: 5px;
+}
+.regist-wrapper .wrapper {
+  margin-left: 70px;
+}
+.regist-wrapper .wrapper label {
+  font-size: 12px;
+}
+.inputBox>div i.red {
+  color: #ef2828;
+  font-size: 18px;
+  padding-left: 0px;
+  left: -15px;
+}
+.regist-wrapper .wrapper label i{
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.select {
+  display: inline-block;
+  margin-left: 90px;
+  width: 350px;
+  position: relative;
+  vertical-align: middle;
+  padding: 0;
+  overflow: hidden;
+  border: solid 1px #687BEF;
+  background: #333E82;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: none;
+  border-radius: 4px;
+  transition: box-shadow 0.25s ease;
+  z-index: 2;
+}
+
+.select:hover {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.select:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #687BEF;
+  top: 14px;
+  right: 10px;
+  cursor: pointer;
+  z-index: -2;
+}
+
+.select select {
+  cursor: pointer;
+  padding: 0px 10px;
+  height: 35px;
+  width: 100%;
+  border: none;
+  color: #baccd8;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 16px;
+}
+
+option {
+    background: #333E82;
+    line-height: 30px;
+    border: solid 1px #687BEF;
+ }
+option:hover {
+  background: #29357b;
+}
+
+.select select:focus {
+  outline: none;
+}
+
+.protocol {
+  display: block;
+  text-align: left;
+  color: #758ba6;
+}
+
+.protocol .protocol-checkbox {
+  margin-right: 0px;
+}
+
+/* 邮箱验证 */
+
+.emailValidate {
+  display: none;
+  width: 642px;
+  height: 400px;
+  padding: 20px;
+  /* background: rgba(44, 75, 119, 0.8); */
+  color: #bdcfdf;
+  background: #333E82;
+  border: solid 1px #687BEF;
+}
+
+.forget-box .title,
+.emailValidate .title {
+  color: #2ac7f2;
+  font-size: 26px;
+}
+
+.retrieve .info,
+.emailValidate .info {
+  margin-top: 0px;
+  line-height: 30px;
+}
+
+.retrieve .info span,
+.emailValidate .info span {
+  color: #2ac7f2;
+}
+
+.emailValidate ul {
+  padding-left: 20px;
+}
+
+.emailValidate ul a {
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+/* 忘记密码 */
+.forget-wrapper{
+  left: 55%;
+  top: 50%;
+}
+.forget-box {
+  width: 540px;
+  height: 320px;
+  padding: 30px;
+  /* background: rgba(44, 75, 119, 0.8); */
+  color: #bdcfdf;
+  background: #333E82;
+  border: solid 1px #687BEF;
+}
+
+.retrieve {
+  display: none;
+}
+
+.inputBox>div.errorBox {
+  color: red;
+  margin-top: 0px;
+}
+
+.alter-msg{
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 58%;
+  width: 30%;
+  height: 80px;
+  transform: translate(-50%,-50%);
+}

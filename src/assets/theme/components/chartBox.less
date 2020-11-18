@@ -1,0 +1,99 @@
+.chartBox() {
+  @bg: rgba(70,196,255,0.07);//rgba(24,75,101,0.13);
+  .chart-box {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: @bg;
+    .chart-title {
+      @h: 0.35rem;
+      // padding: 0px 15px;
+      height: @h;
+      .header-title{
+        height: 100%;
+        box-sizing: border-box;
+        text-align: left;
+        position: relative;
+        i{
+          position: absolute;
+          left: 0.1rem;
+          line-height: 0.35rem;
+          color: @fontColor;
+          font-size: 0.24rem;
+        }
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          height: 1px;
+          width: 0.2rem;
+          left: 0.1rem;
+          bottom: 0.01rem;
+          transform: rotate(30deg) translate(0.1rem, -0.1rem);
+          background:@fontColor;
+        }
+        // &::after {
+        //   content: '';
+        //   display: inline-block;
+        //   position: absolute;
+        //   height: 0.1rem;
+        //   width: 0.1rem;
+        //   right: 0.8rem;
+        //   bottom: -0.04rem;
+        //   border-radius: 50%;
+        //   background: @fontColor;
+        // }
+        span{
+          position: absolute;
+          left: 0.4rem;
+          top: 0;
+          padding: 0 0.2rem 0 0.1rem;
+          // right: 0.8rem;
+          bottom: 0;
+          margin: auto;
+          line-height: 0.35rem;
+          font-size: 0.16rem;
+          letter-spacing: 2px;
+          display: inline-block;
+          box-sizing: border-box;
+          font-family: '微软雅黑 Regular';
+          color:@activeColor;
+          border-bottom: 1px solid @fontColor;
+        }
+        .title {
+          // background-image: @textLinearColor;
+          // -webkit-text-fill-color: transparent;
+          // -webkit-background-clip: text;
+          // color: @fontBlueColor;
+          &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            height: 0.1rem;
+            width: 0.1rem;
+            right: 0;
+            bottom: -0.05rem;
+            border-radius: 50%;
+            background: @fontColor;
+          }
+        }
+        .subtitle {
+          // text-shadow: 0px 0.02rem 0.13rem @textShadowColor;
+        }
+      }
+    }
+    .chart-wrapper {
+      height: calc(~'100% - 0.35rem');
+      padding: 0.1rem;
+      box-sizing: border-box;
+      >div {
+        height: 100%;
+        width: 100%;
+      }
+      &.full-h{
+        height: 100%;
+      }
+    }
+  }
+}

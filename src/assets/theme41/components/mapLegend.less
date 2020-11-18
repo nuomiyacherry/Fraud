@@ -1,0 +1,26 @@
+.mapLegend(){
+  .map-legend{
+   position: absolute;
+   bottom: 30px;
+   left: 30px;
+   .lengend{
+     line-height: 24px;
+     font-size: 14px;
+     color:@grey10;
+     cursor: pointer;
+    i{
+      display: inline-block;
+      margin-right:10px;
+      width: 10px;
+      height:10px;
+      border-radius: 50%;
+      &.blue{
+        background-color: @lengendColorBlue;
+      }
+      &.red{
+        background-color: @lengendColorRed;
+      }
+    }
+   }
+ }
+}

@@ -1,0 +1,101 @@
+@import url('./common.less');
+@import url('./elementUi.less');
+@import url('./components/layout.less');
+@import url('./components/mainHeight.less');
+@import url('./components/corner.less');
+@import url('./components/chartBox.less');
+@import url('./components/totalList.less');
+@import url('./components/progressTable.less');
+@import url('./components/labelList.less');
+@import url('./components/totalBox.less');
+@import url('./components/totalBox1.less');
+@import url('./components/nav.less');
+
+.bluish() {
+  // 黑道白颜色
+  @grey1: #000;
+  @grey2: #262626;
+  @grey3: #595959;
+  @grey4: #8c8c8c;
+  @grey5: #bfbfbf;
+  @grey6: #d9d9d9;
+  @grey7: #e8e8e8;
+  @grey8: #f5f5f5;
+  @grey9: #fafafa;
+  @grey10: #ffffff;
+  
+  @fontColor: #59b5da;
+  @activeColor: #0cfbff;
+  @fontOrangeColor: #f7aa36;
+
+  // 头部高度
+  @headerHeight: 0.5rem;
+  @globalBg: #00071f;
+
+  // 不规则边框背景相关颜色
+  @irregularBg: rgba(26,62,191,0.6);
+  @irregularBorder: rgba(81,129,201,1);
+  
+  @triangleColor: #518deb;
+  @chartBoxBg: rgba(28,100,174,0.25);//rgba(70,196,255,0.07);
+  @tableThBg:rgba(20,72,98,0.7);
+  @tableTdBg:rgba(25,87,118,0.7);
+  @tableThColor:#46C4FF;
+  @tableTdColor:#6AB3CE;
+  @totalBoxBorderColor:#01BDF4;
+  @totalBoxBg:rgba(0,135,255,0.10);
+  @totalBoxLabelColor:#46C4FF;
+  @totalBoxValueColor:#FFA400;
+  @orangeTableThBg:rgba(236,154,57,0.10);
+  @orangeTableTdBg:rgba(233,159,56,0.10);
+  @orangeTableThColor:#F19471;
+  @orangeTableTdColor:#C3987B;
+  @blueTableThBg:rgba(67,103,226,0.10);
+  @blueTableTdBg:rgba(67,120,226,0.10);
+  @blueTableThColor:#65B0FF;
+  @blueTableTdColor:#76A0E1;
+  @purpleTableThBg:rgba(206,90,240,0.10);
+  @purpleTableTdBg:rgba(206,90,240,0.10);
+  @purpleTableThColor:#B778EB;
+  @purpleTableTdColor:#B17EC0;
+  @greenTableThBg:rgba(97,246,255,0.10);
+  @greenTableTdBg:rgba(90,201,225,0.10);
+  @greenTableThColor:#46E5FF;
+  @greenTableTdColor:#70B8DD;
+  @yellowTableThBg:rgba(181,193,75,0.10);;
+  @yellowTableTdBg:rgba(181,193,75,0.10);
+  @yellowTableThColor:#A0B26D;
+  @yellowTableTdColor:#A7A472;
+  @redDialogBg:rgba(67,51,51,0.85);
+  @redDialogTitleColor:#FF8CA7;
+  @redDialogValueColor:#FFD2DC;
+  @redDialogItemBg:rgba(130,47,47,0.3);
+  @purpleDialogBg:rgba(61,49,92,0.85);
+  @purpleDialogTitleColor:#DC8CFF;
+  @purpleDialogValueColor:#ECD2FF;
+  @purpleDialogItemBg:rgba(88,65,145,0.3);
+  @yellowDialogBg:rgba(86,85,75,0.85);
+  @yellowDialogTitleColor:#EEC766;
+  @yellowDialogValueColor:#FFF9D2;
+  @yellowDialogItemBg:rgba(133,109,49,0.3);
+}
+
+.skin-bluish {
+  .bluish();
+  .style-mixins();
+}
+
+.style-mixins() {
+  .elementUi();
+  .common();
+  .layout();
+  .mainHeight();
+  .corner();
+  .chartBox();
+  .totalList();
+  .progressTable();
+  .labelList();
+  .totalBox();
+  .totalBox1();
+  .nav();
+}

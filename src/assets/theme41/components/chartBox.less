@@ -1,0 +1,98 @@
+.chartBox() {
+  // @bg: rgba(70,196,255,0.07);//rgba(24,75,101,0.13);
+  .chart-box {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    &.has-bg{
+      background: @chartBoxBg;//@bg;
+    }
+    .chart-title {
+      @h: 0.25rem;
+      // padding: 0px 15px;
+      height: @h;
+      .header-title{
+        height: 100%;
+        box-sizing: border-box;
+        text-align: left;
+        position: relative;
+        i{
+          position: absolute;
+          left: 0.1rem;
+          line-height: @h;//0.35rem;
+          color: @fontColor;
+          font-size: 0.14rem;
+        }
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          height: 1px;
+          width: 0.12rem;
+          left: 0.1rem;
+          bottom: 0.01rem;
+          transform: rotate(30deg) translate(0.07rem, -0.07rem);
+          background:@fontColor;
+        }
+        span{
+          position: absolute;
+          left: 0.3rem;
+          top: 0;
+          padding: 0 0.1rem 0 0.05rem;
+          // right: 0.8rem;
+          bottom: 0;
+          margin: auto;
+          line-height: @h;//0.35rem;
+          font-size: 0.12rem;
+          letter-spacing: 1px;
+          display: inline-block;
+          box-sizing: border-box;
+          font-family: '微软雅黑 Regular';
+          color:@activeColor;
+          border-bottom: 1px solid @fontColor;
+          &.data-source {
+            font-size: 0.14rem;
+          }
+        }
+        .title {
+          // background-image: @textLinearColor;
+          // -webkit-text-fill-color: transparent;
+          // -webkit-background-clip: text;
+          // color: @fontBlueColor;
+          &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            height: 0.05rem;
+            width: 0.05rem;
+            right: 0;
+            bottom: -0.025rem;
+            border-radius: 50%;
+            background: @fontColor;
+          }
+        }
+        .subtitle {
+          // text-shadow: 0px 0.02rem 0.13rem @textShadowColor;
+        }
+      }
+    }
+    .chart-wrapper {
+      height: calc(~'100% - 0.21rem');
+      padding: 0.07rem;
+      box-sizing: border-box;
+      &.no-padding {
+        height: calc(~'100% - 0.21rem');
+        padding:0rem;
+        padding-top: 0.07rem;
+      }
+      >div {
+        height: 100%;
+        width: 100%;
+      }
+      &.full-h{
+        height: 100%;
+      }
+    }
+  }
+}

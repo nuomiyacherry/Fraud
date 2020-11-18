@@ -1,0 +1,83 @@
+.progressTable() {
+  .progress-table-box {
+    height: 100%;
+
+    // padding:10px;
+    .progress-table {
+      &.el-table {
+        .el-table__expand-column {
+
+          // display: none;
+          // .cell {
+          //   width:0;
+          //   height:0;
+          //   overflow: hidden;
+          //   display: inline-block;
+          // }
+          .el-table__expand-icon {
+            .el-icon-arrow-right:before {
+              content: '' !important;
+            }
+          }
+        }
+
+        &.el-table--border::after,
+        &.el-table--group::after,
+        &.el-table::before {
+          background-color: transparent !important;
+        }
+
+        td,
+        th {
+          border-bottom-width: 0 !important;
+          padding: 6px 0;
+          // text-align: left;
+        }
+
+        td {
+          &:last-child {
+            text-align: center;
+          }
+        }
+
+        th {
+          &:nth-last-child(2) {
+            text-align: center;
+          }
+        }
+
+        tr,
+        th {
+          background-color: transparent !important;
+        }
+
+        thead tr {
+          background: transparent !important;
+          box-shadow: none !important;
+        }
+
+        .el-table__expanded-cell[class*=cell] {
+          padding: 0 !important;
+        }
+
+        &.el-table--fit {
+          border: none !important;
+        }
+
+        .el-progress {
+          .el-progress-bar__outer {
+            // background-color:#2E50BB;
+            background-color: #1c3383;
+          }
+
+          &.gradual {
+            .el-progress-bar__inner {
+              // background-image:linear-gradient(to right, #02A9D0, #DBD221)
+              background-image: linear-gradient(to right, #4e88ea, #fc7f5a)
+            }
+          }
+        }
+      }
+    }
+  }
+}

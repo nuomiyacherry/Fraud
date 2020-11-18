@@ -1,0 +1,692 @@
+.common() {
+  .mb-5 {
+    margin-bottom: 5px;
+  }
+
+  .mt-5 {
+    margin-top: 5px;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .mb-15 {
+    margin-bottom: 15px;
+  }
+
+  .mt-15 {
+    margin-top: 15px;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .ml-5 {
+    margin-left: 5px;
+  }
+
+  .mr-5 {
+    margin-right: 5px;
+  }
+
+  .ml-10 {
+    margin-left: 10px;
+  }
+
+  .mr-10 {
+    margin-right: 10px;
+  }
+
+  .ml-15 {
+    margin-left: 15px;
+  }
+
+  .mr-15 {
+    margin-right: 15px;
+  }
+
+  .ml-20 {
+    margin-left: 20px;
+  }
+
+  .mr-20 {
+    margin-right: 20px;
+  }
+
+  .echarts {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .x-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .y-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .flex-d-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-d-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-layout {
+    display: flex;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-2 {
+    flex: 2;
+  }
+
+  .flex-3 {
+    flex: 3;
+  }
+
+  .flex-4 {
+    flex: 4;
+  }
+
+  .flex-5 {
+    flex: 5;
+  }
+
+  .flex-6 {
+    flex: 6;
+  }
+
+  .flex-8 {
+    flex: 8;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .pr {
+    position: relative;
+  }
+
+  .abs {
+    position: absolute;
+    margin: 0;
+  }
+
+  .abs-center-x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .abs-center-y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .full-block {
+    height: 100%;
+    width: 100%;
+  }
+
+  .full-h {
+    height: 100%;
+  }
+
+  .half-h {
+    height: 50%;
+  }
+  .clearfix() {
+    *zoom: 1;
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: ' ';
+      clear: both;
+      height: 0;
+    }
+  }
+  .clearfix {
+    .clearfix();
+  }
+  .chart-box {
+    .btns {
+      .clearfix();
+      .el-radio-group {
+        display: block;
+        vertical-align: top;
+        float: right;
+      }
+    }
+    .btns + .echarts {
+      height: calc(~"100% - 24px") !important;
+    }
+  }
+
+  .text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // 监测处置-弹框列表内容
+  .dispose-list{
+    color:@fontColor;
+    font-size:0.1rem;
+    .list-item{
+      margin-bottom:10px;
+      .item-group{
+        // background: rgba(29,59,83,1);
+        background: #1F3F58;
+        &:first-child{
+          // background: linear-gradient(to bottom, rgba(45,92,120,1), rgba(33,67,92,1));
+          background: linear-gradient(to bottom, #336889, #254E6B);
+        }
+        &:not(:last-child){
+          border-bottom:2px solid #2C597C;//rgba(36,66,91,1);
+        }
+        .item{
+          float: left;
+          width:50%;
+          padding:0.04rem 0.05rem; 
+          display: flex;
+          i{
+            color:#CFF9FF;
+            width:0.15rem;
+            height:0.15rem;
+            text-align: center;
+            line-height: 0.15rem;
+            border-radius: 0.03rem;
+            font-size:0.1rem;
+            margin-right:0.05rem;
+          }
+          .item-label{
+            width:0.7rem;
+            color:#3EAFE4;
+            font-weight: 600;
+          }
+          .item-value{
+            width:calc(~'100% - 0.7rem');
+            word-break: break-all;
+            color:#70CFF2;//rgba(143,196,212);
+          }
+          
+        }
+        &:first-child{
+          i{
+            background-image: linear-gradient(to bottom, #FF5B8E 0%, #D33B5D 100%);
+          }
+        }
+        &:nth-child(2){
+          i{
+            background-image: linear-gradient(to bottom, #EE9D60  0%, #E45A3E 100%);
+          }
+        }
+        &:nth-child(3){
+          i{
+            background-image: linear-gradient(to bottom, #42F6FF 0%, #2CACE8 100%);
+          }
+        }
+        &:nth-child(4){
+          i{
+            background-image: linear-gradient(to bottom, #6F94FF 0%, #3E85E4 100%);
+          }
+        }
+        &::after{
+          content:'';
+          display: block;
+          clear: both;
+        }
+      }
+    }
+  }
+  // 监测处置-涉诈APP监测弹框
+  .fraud-app-detail{
+    color:@fontColor;
+    font-size:0.1rem;
+    ul{
+      border:2px solid #2C597C;
+      border-bottom:none;
+      li{
+        float: left;
+        width:50%;
+        padding:0.04rem 0.05rem; 
+        display: flex;
+        border-bottom:2px solid #2C597C;
+        background-color:#1F3F58;
+        i{
+          color:#CFF9FF;
+          width:0.15rem;
+          height:0.15rem;
+          text-align: center;
+          line-height: 0.15rem;
+          border-radius: 0.03rem;
+          font-size:0.1rem;
+          margin-right:0.05rem;
+        }
+        &:first-child,&:nth-child(2){
+          i{
+            background-image: linear-gradient(to bottom, #FF5B8E 0%, #D33B5D 100%);
+          }
+        }
+        &:nth-child(3){
+          i{
+            background-image: linear-gradient(to bottom, #EE9D60  0%, #E45A3E 100%);
+          }
+        }
+        &:nth-child(4),&:nth-child(5){
+          i{
+            background-image: linear-gradient(to bottom, #42F6FF 0%, #2CACE8 100%);
+          }
+        }
+        &:nth-child(6){
+          i{
+            background-image: linear-gradient(to bottom, #6F94FF 0%, #3E85E4 100%);
+          }
+        }
+        .label{
+          width:0.5rem;
+          color:#3EAFE4;
+          font-weight: 600;
+          // text-align: justify;
+          // &:after{
+          //   content:'';
+          //   display: inline-block;
+          //   width:100%;
+          // }
+        }
+        .value{
+          width:calc(~'100% - 0.7rem');
+          word-break: break-all;
+          color:#70CFF2;//rgba(143,196,212);
+        }
+        &.large{
+          width:60%;
+        }
+        &.small{
+          width:40%;
+        }
+        &.block{
+          width:100%;
+        }
+      }
+      &::after{
+        content:'';
+        display: block;
+        clear: both;
+      }
+    }
+    .desc{
+      margin-top:0.1rem;
+      background: #336889;//linear-gradient(to bottom, #336889, #254E6B);
+      padding:0.1rem;
+    }
+  }
+
+  //自定义标题样式
+  .cus-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    padding: 0 0.4rem;
+    font-size: 0.13rem;
+    color: #0cfbff;
+    background: url(~assets/img/special-title.png) no-repeat center center / 100% 100%;
+    z-index: 100;
+  }
+  .cus-bg{
+    background: @chartBoxBg;
+    // &.active{
+    //   // background: rgba(0,255,248,0.1);
+    //   // border: 1px solid #19A8B9;
+    //   background: rgba(28,100,174,0.25);
+    //   border: 1 solid #026891;
+    // }
+  }
+
+  //自定义tab页
+  .tabs-box{
+    margin-bottom:0.05rem;
+    // padding:0 0.05rem;
+    ul{
+      display: flex;
+      .tab-item{
+        font-size:0.1rem;
+        flex:1;
+        text-align: center;
+        background:rgba(33,86,120,1);
+        height:0.2rem;
+        line-height:0.2rem;
+        // padding:0.04rem 0;
+        box-sizing: content-box;
+        border:2px solid rgba(99,161,192,1);
+        color:rgba(99,161,192,1);
+        &:not(:last-child){
+          margin-right:0.05rem;
+        }
+        &.active{
+          background:rgba(35,94,124,1);
+          border-color:rgba(17,225,231,1);
+          color:rgba(17,225,231,1);
+        }
+      }
+    }
+  }
+ 
+  // 深度分析-app模块
+  .analysis-app{
+    .cus-title{
+      top:0.05rem;
+    }
+    @height:0.3rem;
+    .top-data{
+      margin-bottom: 0.1rem;
+      height: @height;
+      line-height: @height;
+      // align-items: center;
+      >div{
+        background: @totalBoxBg;
+        border: 1px solid @totalBoxBorderColor;
+        border-left-width:3px;
+        border-right-width:3px;
+        padding:0 0.05rem;
+        float: left;
+        height: @height;
+        line-height: @height;
+        &.app-total{
+          font-size: 0.1rem;
+          width:35%;
+          margin-right:0.05rem;
+          height: @height;       
+          .icon{
+            color:@totalBoxLabelColor;
+            font-size:0.15rem;
+            margin-right:0.05rem;
+            font-weight: 600;
+          }
+          .total-label{
+            color:@totalBoxLabelColor;
+            display: inline-block;
+            height:100%;
+            vertical-align: top;
+          }
+          .total-value{
+            font-size:0.15rem;
+            color: @totalBoxValueColor;
+            font-family: 'DS-Digital';
+            float: right;
+          }
+        }
+        &.scroll-box{
+          // width:calc(~'65% - 0.05rem');
+          width: 100%;
+          font-size: 0.1rem;
+          // position: relative;
+          .scroll-title{
+            color:@totalBoxLabelColor;
+            float:left;
+            // margin-right:0.05rem;
+            font-size: 0.11rem;
+            width: 0.8rem;
+          }
+          .warning-list{
+            float:left;
+            width:calc(~'100% - 0.8rem');
+            // margin-left: 0.9rem;
+            // position: absolute;
+            // left: 0.85rem;
+            // top: 0rem;
+            overflow: hidden;
+            height: @height - 0.02rem;
+            // line-height:0.2rem;
+            li{
+              line-height:0.2rem;
+              // float: left;
+              // white-space: nowrap;
+              color:#0cfbff;
+              .waning-time{
+                margin-right:0.05rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .total-ul {
+     li {
+      float: left;
+      width: calc(~'50% - 0.05rem');
+      height:calc(~'50% - 0.05rem');
+      margin-right: 0.1rem;
+      margin-bottom: 0.1rem;
+      background: rgba(0,135,255,0.10);
+      text-align: center;
+      border: 1px solid #01BDF4;
+      border-left-width:3px;
+      border-right-width:3px;
+      // height:100%;
+      padding:0 0.1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:nth-of-type(even){
+        margin-right: 0px;
+      }
+      .label {
+        color:#46C4FF;
+        font-size: 0.1rem;
+        // padding:0.03rem 0.05rem;
+      }
+      .value {
+        color: #FFA400;
+        font-family: 'DS-Digital';
+        font-size:0.15rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .wrapper-box{
+    position: relative;
+    top:0.35rem;
+    height:calc(~'100% - 0.3rem') !important;
+    padding:0.1rem;
+  }
+
+  .content-nav{
+    height:100%;
+    font-size:0.14rem;
+    color:@fontOrangeColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .nav-item{
+      flex:1;
+      background: url(~assets/img/analysis/outer_bg.png) no-repeat center center / 100% 100%;
+      padding:0.22rem 0;
+      cursor: pointer;
+      &:not(:last-child){
+        margin-bottom:0.2rem;
+      }
+      &.active{
+        background: url(~assets/img/analysis/outer_active_bg.png) no-repeat center center / 100% 100%;
+      }
+      .nav-info{
+        height: 100%;
+        background: url(~assets/img/analysis/inner_bg.png) no-repeat center center / 100% 100%;
+        text-align: center;
+        padding-top:0.14rem;
+        .icon{
+          font-size: 0.16rem;
+          margin-right: 0.06rem;
+          color: #0cfbff;
+        }
+      }
+    }
+  }
+  .el-table .progress-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .progress-span{
+      margin-left:0.1rem;
+    }
+  }
+
+  //监测处置-已处置详情弹框样式(3中颜色)  
+  // .dialogStyle(@dialogBg;@titleColor;@valueColor;@itemBg;){
+  //   &.el-dialog{
+  //     background:@dialogBg;
+  //     .el-dialog__header{
+  //       .el-dialog__title{
+  //         color:@titleColor;
+  //       }
+  //     }
+  //   }
+  //   .dispose-list{
+  //     color:@titleColor;
+  //     font-size:0.1rem;
+  //     .list-item{
+  //       margin-bottom:10px;
+  //       .item-group{
+  //         background: @itemBg;
+  //         .item{
+  //           float: left;
+  //           width:50%;
+  //           padding:0.04rem 0.05rem; 
+  //           display: flex;
+  //           i{
+  //             width:0.2rem;
+  //             font-size:0.13rem;
+  //           }
+  //           .item-label{
+  //             width:0.7rem;
+  //             color:@titleColor;
+  //             font-weight: 600;
+  //           }
+  //           .item-value{
+  //             width:calc(~'100% - 0.9rem');
+  //             word-break: break-all;
+  //             color:@valueColor;
+  //           }
+  //         }
+  //         &::after{
+  //           content:'';
+  //           display: block;
+  //           clear: both;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .dispose-domain{
+  //   .dispose-list{
+  //     .list-item{
+  //       .item-group{
+  //         &:first-child{
+  //           background: linear-gradient(to bottom, rgba(190, 105, 128, 0.5), rgba(179, 87, 110, 0.5));
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .dialogStyle(@redDialogBg;@redDialogTitleColor;@redDialogValueColor;@redDialogItemBg;)
+  // }
+  // .dispose-app{
+  //   .dispose-list{
+  //     .list-item{
+  //       .item-group{
+  //         &:first-child{
+  //           background: linear-gradient(to bottom, rgba(149, 101, 194, 0.5), rgba(105, 66, 173, 0.5));
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .dialogStyle(@purpleDialogBg;@purpleDialogTitleColor;@purpleDialogValueColor;@purpleDialogItemBg;)
+  // }
+  // .dispose-account{
+  //   .dispose-list{
+  //     .list-item{
+  //       .item-group{
+  //         &:first-child{
+  //           background: linear-gradient(to bottom, rgba(224, 207, 101, 0.5), rgba(176, 157, 95, 0.5));
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .dialogStyle(@yellowDialogBg;@yellowDialogTitleColor;@yellowDialogValueColor;@yellowDialogItemBg;)
+  // }
+  .home{
+    .total-box{
+      .item{
+        padding:0.15rem 0;
+        .icon-bg{
+          width:0.17rem;
+          height:0.17rem;
+          line-height: 0.16rem;
+        }
+        .icon,.label{
+          font-size: 0.16rem;
+        }
+        .icon{
+          font-size: .17rem;
+          margin-right:0.1rem;
+        }
+        .value{
+          font-size: 0.18rem;
+        }
+      }
+    }
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #565677;
+  }
+
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb {
+    background-color: #0ae;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
+  }
+}

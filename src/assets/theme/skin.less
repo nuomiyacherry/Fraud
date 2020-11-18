@@ -1,0 +1,60 @@
+@import url('./common.less');
+@import url('./elementUi.less');
+@import url('./components/layout.less');
+@import url('./components/mainHeight.less');
+@import url('./components/corner.less');
+@import url('./components/chartBox.less');
+@import url('./components/totalList.less');
+@import url('./components/progressTable.less');
+@import url('./components/labelList.less');
+@import url('./components/totalBox.less');
+
+.bluish() {
+  // 黑道白颜色
+  @grey1: #000;
+  @grey2: #262626;
+  @grey3: #595959;
+  @grey4: #8c8c8c;
+  @grey5: #bfbfbf;
+  @grey6: #d9d9d9;
+  @grey7: #e8e8e8;
+  @grey8: #f5f5f5;
+  @grey9: #fafafa;
+  @grey10: #ffffff;
+  
+  @fontColor: #52bbce;
+  @activeColor: #0cfbff;
+  @fontOrangeColor: #efc45e;
+
+  // 头部高度
+  @headerHeight: 0.6rem;
+  @globalBg: #00071f;
+
+  // 不规则边框背景相关颜色
+  @irregularBg: rgba(26,62,191,0.6);
+  @irregularBorder: rgba(81,129,201,1);
+  
+  @triangleColor: #518deb;
+
+
+
+
+}
+
+.skin-bluish {
+  .bluish();
+  .style-mixins();
+}
+
+.style-mixins() {
+  .elementUi();
+  .common();
+  .layout();
+  .mainHeight();
+  .corner();
+  .chartBox();
+  .totalList();
+  .progressTable();
+  .labelList();
+  .totalBox();
+}

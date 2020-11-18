@@ -1,0 +1,271 @@
+.mainHeight() {
+  .main-height {
+    &.el-row {
+      height: 100%;
+
+      .el-col {
+        height: 100%;
+        
+        .el-row, .el-col {
+          height: 100%;
+        }
+
+        >div {
+          height: 100%;
+          .height-10 {
+            height: calc(~'100% - 0.1rem');
+          }
+
+          .row-h {
+            .wrapper {
+              position: relative;
+              height: calc(~'100% - 0.1rem');
+              margin-bottom: 0.1rem;
+            }
+          }
+        }
+
+        .ratio11 {
+          @height: calc(~'(100% / 2)');
+
+          .h-1 {
+            height: @height;
+          }
+        }
+
+        .ratio12 {
+          @height: calc(~'(100% / 3)');
+
+          >.h-1 {
+            height: @height;
+          }
+
+          >.h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio13 {
+          @height: calc(~'(100% / 4)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-3 {
+            height: calc(~'@{height} * 3');
+          }
+        }
+
+        .ratio21 {
+          @height: calc(~'(100% / 3)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+        .ratio22{
+          @height:100%;
+        }
+
+
+        .ratio23,
+        .ratio32 {
+          @height: calc(~'(100% / 5)');
+
+          .h-3 {
+            height: calc(~'@{height} * 3');
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+        .ratio41 {
+          @height: calc(~'(100% / 5)');
+
+          .h-4 {
+            height: calc(~'@{height} * 4');
+          }
+
+          .h-1 {
+            height: @height;
+          }
+        }
+        .ratio42 {
+          @height: calc(~'(100% / 6)');
+
+          .h-4 {
+            height: calc(~'@{height} * 4');
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio34 {
+          @height: calc(~'(100% / 7)');
+
+          >.h-3 {
+            height: calc(~'@{height} * 3');
+          }
+
+          >.h-4 {
+            height: calc(~'@{height} * 4');
+          }
+        }
+
+        .ratio31 {
+          @height: calc(~'(100% / 4)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-3 {
+            height: calc(~'@{height} * 3');
+          }
+        }
+
+        .ratio111 {
+          @height: calc(~'(100% / 3)');
+
+          .h-1 {
+            height: @height;
+          }
+        }
+
+        .ratio211 {
+          @height: calc(~'(100% / 4)');
+
+          .h-1 {
+            height: @height;
+          }
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio121 {
+          @height: calc(~'(100% / 4)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio122 {
+          @height: calc(~'(100% / 5)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio112 {
+          @height: calc(~'(100% / 4)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio212 {
+          @height: calc(~'(100% / 5)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio233 {
+          @height: calc(~'(100% / 8)');
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+
+          .h-3 {
+            height: calc(~'@{height} * 3');
+          }
+        }
+
+        .ratio322 {
+          @height: calc(~'(100% / 7)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+
+          .h-3 {
+            height: calc(~'@{height} * 3');
+          }
+        }
+
+        .ratio1111 {
+          @height: calc(~'(100% / 4)');
+
+          .h-1 {
+            height: @height;
+          }
+        }
+        .ratio11111 {
+          @height: calc(~'(100% / 5)');
+
+          .h-1 {
+            height: @height;
+          }
+        }
+
+        .ratio1221 {
+          @height: calc(~'(100% / 6)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+
+        .ratio1222 {
+          @height: calc(~'(100% / 7)');
+
+          .h-1 {
+            height: @height;
+          }
+
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.totalList() {
+  .total-list {
+    height: 100%;
+    .item{
+      height: 60%;
+      width: 92%;
+      margin:0 auto;
+      // border: 1px solid @borderColor;
+      // background: @tableTdBg;
+      // box-shadow: inset 0 0 15px 0 @boxShadowColor;
+      &:first-child {
+        margin-top: 1vh;
+      }
+      .icon-bg{
+        position: absolute;
+        width: 5vh;
+        height: 5vh;
+        top: -2vh;
+        left: -2vh;
+        border-radius: 50%;
+        text-align: center;
+        i {
+          font-size: 1.4vmax;
+          line-height: 5vh;
+          &.total{
+            line-height:3.5vh !important;
+          }
+          &.total1{
+            line-height:2.6vh !important;
+          }
+        }
+        &.icon-bg1 {
+          background: #488dbb
+        }
+        &.icon-bg2 {
+          background: #752b87
+        }
+        &.icon-bg3 {
+          background: #3552c2
+        }
+        &.icon-bg4 {
+          background: #756767
+        }
+        &.icon-bg5 {
+          background: #ddde76
+        }
+      }
+      .label{
+        padding-left: 30px;
+        font-size: 0.9vmax;
+      }
+      .value{
+        text-align: right;
+        padding-right: 20px;
+        color: @activeColor;
+        font-size: 1.2vmax;
+      }
+    }
+  }
+}
